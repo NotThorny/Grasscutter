@@ -37,6 +37,7 @@ public final class GameConstants {
         "GrapplingHookSkill_Ability",
         "SceneAbility_DiveVolume",
         "Avatar_PlayerBoy_DiveStamina_Reduction",
+        "Avatar_PlayerGirl_DiveStamina_Reduction",
 
         // Team
         "Ability_Avatar_Dive_Team", //(THIS SHLD HAVE BEEN IN TEAM)
