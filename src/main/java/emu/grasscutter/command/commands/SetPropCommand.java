@@ -249,7 +249,7 @@ public final class SetPropCommand implements CommandHandler {
                                     var scenePointEentry = GameData.getScenePointEntryById(sceneId, p);
                                     var pointData = scenePointEentry.getPointData();
 
-                                    boolean forbidSimpleUnlock = pointData.isForbidSimpleUnlock();
+                                    // boolean forbidSimpleUnlock = pointData.isForbidSimpleUnlock();
                                     boolean sceneBuildingPointLocked =
                                             pointData.getType().equals("SceneBuildingPoint") && !pointData.isUnlocked();
 

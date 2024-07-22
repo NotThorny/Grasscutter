@@ -269,6 +269,7 @@ public final class GiveCommand implements CommandHandler {
         giveAllAvatars(player, param);
         giveAllMats(player, param);
         giveAllWeapons(player, param);
+        giveAllArt(player, param);
     }
 
     private static void giveAllArt(Player player, GiveItemParameters param) {

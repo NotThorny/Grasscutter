@@ -33,6 +33,12 @@ public final class UnlockAllCommand implements CommandHandler {
 
         targetPlayer.sendPacket(new PacketOpenStateChangeNotify(changed));
 
+        var setP = new SetPropCommand();
+        // Unlock map
+        setP.execute(sender, targetPlayer, List.of("um", "1"));
+        // Unlock all abyss floors
+        setP.execute(sender, targetPlayer, List.of("abyss", "12"));
+
         CommandHandler.sendMessage(
                 sender, translate(sender, "commands.unlockall.success", targetPlayer.getNickname()));
     }
