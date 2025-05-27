@@ -199,7 +199,12 @@ public class BlossomManager {
             };
             var rewards = blossomRewards.getPreviewItems();
             for (ItemParamData blossomReward : rewards) {
-                int rewardCount = blossomReward.getCount();
+                int rewardCount = 0;
+                if (blossomReward.getMax() == 0) {
+                    rewardCount = blossomReward.getCount();
+                } else {
+                    rewardCount = Utils.randomRange(blossomReward.getMin(), blossomReward.getMax());
+                }
                 if (useCondensedResin) {
                     rewardCount += blossomReward.getCount(); // Double!
                 }

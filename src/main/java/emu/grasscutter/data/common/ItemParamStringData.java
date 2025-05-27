@@ -18,6 +18,11 @@ public class ItemParamStringData {
         if (count.contains(";")) {
             String[] split = count.split(";");
             count = count.split(";")[split.length - 1];
+            ItemParamData data = new ItemParamData(id, Integer.parseInt(count));
+            data.setMin(Integer.parseInt(split[0]));
+            data.setMax(Integer.parseInt(count));
+
+            return data;
         } else if (count.contains(".")) {
             return new ItemParamData(id, (int) Math.ceil(Double.parseDouble(count)));
         }
